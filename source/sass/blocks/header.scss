@@ -1,0 +1,57 @@
+.header {
+  font-family: $ff-special;
+  padding-top: 30px;
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  background-color: $color-transparent;
+  color: $color-default-white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  @include vp-1023 {
+    padding-top: 40px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+  }
+}
+
+.header__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header__logo {
+  @include vp-1023 {
+    img {
+      width: 79px;
+      height: 20px;
+    }
+  }
+
+  @include vp-767 {
+    img {
+      width: 68px;
+      height: 15px;
+    }
+  }
+}
+
+.header__tel {
+  color: $color-default-white;
+  justify-self: right;
+  font-family: $ff-special;
+
+  @include vp-1023 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
