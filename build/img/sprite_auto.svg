@@ -1,1 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs>
+<linearGradient id="paint0_linear_1_155" x1="19.774" y1="3.00672e-05" x2="105.785" y2="10.6444" gradientUnits="userSpaceOnUse">
+<stop stop-color="#ED0233"/>
+<stop offset="1" stop-color="#003EB7"/>
+</linearGradient>
+<linearGradient id="paint1_linear_1_155" x1="14" y1="49.52" x2="54.1858" y2="9.18415" gradientUnits="userSpaceOnUse">
+<stop stop-color="#003D85"/>
+<stop offset="0.885417" stop-color="#B80027"/>
+</linearGradient>
+</defs><symbol id="icon-close" viewBox="0 0 20 20"><path d="M.293 18.291a1 1 0 101.414 1.414L10 11.413l8.292 8.292a1 1 0 101.414-1.414l-8.292-8.292 8.292-8.292A1 1 0 1018.291.293L9.999 8.585 1.707.293A1 1 0 10.293 1.707L8.585 10 .293 18.291z"/></symbol><symbol id="svg-button" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="49" stroke="url(#paint0_linear_1_155)" stroke-opacity="0.2" stroke-width="2"/>
+<circle cx="50" cy="50" r="36" fill="url(#paint1_linear_1_155)"/>
+<path d="M59 49.5L46.25 56.8612L46.25 42.1388L59 49.5Z" fill="white"/>
+
+</symbol></svg>

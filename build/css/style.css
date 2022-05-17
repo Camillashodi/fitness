@@ -780,7 +780,7 @@ button,
 }
 
 .header {
-  font-family: "Bebas Neue";
+  font-family: "Bebas Neue", "Arial", sans-serif;
   padding-top: 30px;
   font-size: 26px;
   line-height: 26px;
@@ -807,7 +807,7 @@ button,
 }
 
 .main-header {
-  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   padding-top: 51px;
   padding-bottom: 51px;
   color: #ffffff;
@@ -884,7 +884,6 @@ button,
   text-align: right;
   font-size: 14px;
   line-height: 21px;
-  min-width: 113px;
   -ms-grid-column: 1;
   grid-column-start: 1;
   -ms-grid-column-span: 2;
@@ -948,7 +947,7 @@ button,
   display: block;
   text-transform: uppercase;
   color: #ffffff;
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
@@ -956,6 +955,77 @@ button,
 
 .wrapper {
   position: relative;
+}
+
+.description {
+  padding-top: 120px;
+  color: #102654;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+.description__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 35.8% 7.3% 57%;
+  grid-template-columns: 35.8% 7.3% 57%;
+  position: relative;
+}
+
+.description__text {
+  margin-left: 60px;
+}
+
+.description__text h2 {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: #102654;
+}
+
+.description__text p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.description__sub-title p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.description__photo {
+  -ms-grid-column: 3;
+  grid-column-start: 3;
+}
+
+.description__video {
+  position: absolute;
+  width: 29vw;
+  max-width: 364px;
+  height: 18vw;
+  max-height: 228px;
+  left: 38%;
+  top: 288px;
+}
+
+.description__video-button {
+  display: block;
+  position: absolute;
+  top: 40%;
+  left: 34%;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 100px;
+  height: 100px;
+}
+
+.description__video-button svg {
+  position: absolute;
+  top: -15px;
+  left: -13px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
