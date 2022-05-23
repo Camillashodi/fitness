@@ -1,0 +1,135 @@
+.card {
+  background-color: $color-default-white;
+  padding-top: 56px;
+  padding-bottom: 56px;
+  box-sizing: border-box;
+  border: 7px solid $color-transparent;
+  max-height: 448px;
+  height: 35vw;
+  overflow-y: auto;
+
+  @include vp-1023 {
+    width: 58vw;
+    height: 59vw;
+    min-height: 448px;
+    max-height: none;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    max-width: 442px;
+    max-height: 584px;
+    min-height: 384px;
+    height: 119vw;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+      border-image-slice: 30%;
+
+      .card__button {
+        background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+        color: $color-default-white;
+        outline: none;
+        border: none;
+        padding-top: 27px;
+        padding-bottom: 27px;
+      }
+    }
+  }
+
+  &:focus,
+  &:focus-within {
+    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-slice: 30%;
+
+    .card__button {
+      background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+      color: $color-default-white;
+      outline: none;
+      border: none;
+      padding-top: 27px;
+      padding-bottom: 27px;
+    }
+  }
+
+  h3 {
+    font-family: $ff-default;
+    font-size: 26px;
+    line-height: 29px;
+    font-weight: 700;
+    color: $color-sapphire;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 8px;
+  }
+
+  p {
+    text-align: center;
+    font-family: $ff-default;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.card__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100%;
+}
+
+.card__price {
+  position: relative;
+  margin-bottom: 35px;
+  align-self: end;
+
+  @include vp-767 {
+    margin-bottom: 25px;
+  }
+
+  p {
+    position: relative;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 90px;
+    color: $egyptian-blue;
+    padding-top: 15px;
+    z-index: 2;
+  }
+
+  &::before {
+    content: attr(data-parent);
+    font-size: 100px;
+    line-height: 100px;
+    font-weight: 700;
+    color: #e8e8e8;
+    font-family: $ff-default;
+    position: absolute;
+    bottom: 15px;
+    left: 20%;
+    z-index: 1;
+    opacity: 0.48;
+  }
+}
+
+.card__button {
+  box-sizing: border-box;
+  border: 2px solid $color-sapphire;
+  margin: 0 auto;
+  background-color: $color-transparent;
+  color: $color-sapphire;
+  font-family: $ff-default;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  padding: 25px 49px;
+  align-self: end;
+  //margin-bottom: 15px;
+}

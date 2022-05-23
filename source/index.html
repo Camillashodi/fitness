@@ -54,7 +54,7 @@
         </div>
       </header>
       <section class="description">
-        <div class="description__container container">
+        <div class="description__container">
           <div class="description__text">
             <h2>Тренажерный зал</h2>
             <div class="description__sub-title">
@@ -91,102 +91,350 @@
           </div>
         </div>
       </section>
-      <section class="description__subscription">
-        <div class="container">
+      <section class="subscription">
+        <div class="subscription__container container">
           <h2>Абонементы</h2>
-          <ul class="description__settings settings">
-            <li class="settings__item">1 месяц</li>
-            <li class="settings__item">6 месяцев</li>
-            <li class="settings__item">12 месяцев</li>
-          </ul>
-          <ul class="description__list">
-            <li class="description__item card">
-              <h3>С тренером</h3>
-              <p>12 занятий</p>
-              <p>5000</p>
-              <a href="#" class="btn card__button">купить абонемент</a>
+          <ul class="subscription__tabs tabs">
+            <li class="tabs__item">
+              <a href="#" class="tabs__link is-active">1 месяц</a>
             </li>
-            <li class="description__item card">
-              <h3>Дневной</h3>
-              <p>с 8:00 до 17:00</p>
-              <p>1700</p>
-              <a href="#" class="btn card__button">купить абонемент</a>
+            <li class="tabs__item">
+              <a href="#" class="tabs__link">6 месяцев</a>
             </li>
-            <li class="description__item card">
-              <h3>Полный день</h3>
-              <p>с 8:00 до 22:00</p>
-              <p>2700</p>
-              <a href="#" class="btn card__button">купить абонемент</a>
+            <li class="tabs__item">
+              <a href="#" class="tabs__link">12 месяцев</a>
             </li>
           </ul>
+          <div class="tabs-content">
+            <ul class="tabs-content__list tabs-content__list--first">
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>С тренером</h3>
+                  <p>12 занятий</p>
+                  <div class="card__price" data-parent="5000">
+                    <p>
+                      <span>5000</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>Дневной</h3>
+                  <p>с 8:00 до 17:00</p>
+                  <div class="card__price" data-parent="1700">
+                    <p>
+                      <span>1700</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>Полный день</h3>
+                  <p>с 8:00 до 22:00</p>
+                  <div class="card__price" data-parent="2700">                
+                    <p>
+                      <span>2700</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="tabs-content__list tabs-content__list--second">
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>С тренером</h3>
+                  <p>12 занятий</p>
+                  <div class="card__price" data-parent="15000">
+                    <p>
+                      <span>15000</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>Дневной</h3>
+                  <p>с 8:00 до 17:00</p>
+                  <div class="card__price" data-parent="11700">
+                    <p>
+                      <span>11700</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>Полный день</h3>
+                  <p>с 8:00 до 22:00</p>
+                  <div class="card__price" data-parent="12700">                
+                    <p>
+                      <span>12700</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="tabs-content__list tabs-content__list--third">
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>С тренером</h3>
+                  <p>12 занятий</p>
+                  <div class="card__price" data-parent="55000">
+                    <p>
+                      <span>55000</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>Дневной</h3>
+                  <p>с 8:00 до 17:00</p>
+                  <div class="card__price" data-parent="21700">
+                    <p>
+                      <span>21700</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+              <li class="tabs-content__item card">
+                <div class="card__content">
+                  <h3>Полный день</h3>
+                  <p>с 8:00 до 22:00</p>
+                  <div class="card__price" data-parent="22700">                
+                    <p>
+                      <span>22700</span>
+                      <svg width="30" height="42" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite_auto.svg#ruble"></use>
+                      </svg>
+                    </p>
+                  </div>
+                  <a href="#" class="btn card__button">купить абонемент</a>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section class="event">
         <div class="event__container container">
           <div class="event__content">
-            <h2>SUPER GAMES</h2>
-            <p>Ежегодные соревнования по CrossFit</p>
-            <table>
-              <tr>
-                <th>Дата</th>
-                <th>Время</th>
-              </tr>
-              <tr>
-                <td>7 Марта 2019</td>
-                <td>12:00</td>
-              </tr>
-            </table>
-            <a href="#" class="event__button btn">заполнить заявку</a>
+            <div class="event__wrapper">
+              <div class="event__title">
+                <h2>SUPER GAMES</h2>
+              </div>
+              <div class="event__description">
+                <p>Ежегодные соревнования по CrossFit</p>
+              </div>
+              <div class="event__date">
+                <table>
+                  <tr>
+                    <th>Дата</th>
+                    <td><b>7&nbsp;</b> Марта<br>2019</td>
+                  </tr>
+                  <tr>
+                    <th>Время</th>
+                    <td><b>12:00</b></td>
+                  </tr>
+                </table>
+              </div>
+              <a href="#" class="event__button btn">заполнить заявку</a>
+            </div>
           </div>
           <div class="event__img">
-            <img src="#" alt="">
+            <img src="./img/crossfit.jpg" alt="">
           </div>
         </div>
       </section>
       <section class="trainers">
         <div class="trainers__container container">
-          <ul class="trainers__list">
-            <li class="trainers__item trainer-card">
-              <h2>Александр Пашков</h2>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-              <img src="#" alt="">
-            </li>
-            <li class="trainers__item trainer-card">
-              <h2>Александр Пашков</h2>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-              <img src="#" alt="">
-            </li>
-            <li class="trainers__item trainer-card">
-              <h2>Александр Пашков</h2>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-              <img src="#" alt="">
-            </li>
-            <li class="trainers__item trainer-card">
-              <h2>Александр Пашков</h2>
-              <p>CrossFit</p>
-              <ul>
-                <li>Certified Level 3 Trainer</li>
-                <li>Победитель чемпионата России по CrossFit </li>
-                <li>Опыт — 6 лет</li>
-              </ul>
-              <img src="#" alt="">
-            </li>
-          </ul>
+          <h2>Тренеры</h2>
+          <div class="trainers__wrapper">
+            <ul class="trainers__list">
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider1.jpg" alt="">
+                    <figcaption>Анна Павлова</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Алексей Лавров</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider2.jpg" alt="">
+                    <figcaption>Алексей Лавров</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Александр Пашков</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider2.jpg" alt="">
+                    <figcaption>Александр Пашков</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Мария Кетова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider4.jpg" alt="">
+                    <figcaption>Мария Кетова</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider1.jpg" alt="">
+                    <figcaption>Анна Павлова</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider1.jpg" alt="">
+                    <figcaption>Анна Павлова</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider1.jpg" alt="">
+                    <figcaption>Анна Павлова</figcaption>
+                  </figure>
+                </div>
+              </li>
+              <li class="trainers__item trainer-card" tabindex="0">
+                <div class="trainer-card__content">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit </li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <div class="trainer-card__avatar">
+                  <figure>
+                    <img src="./img/slider1.jpg" alt="">
+                    <figcaption>Анна Павлова</figcaption>
+                  </figure>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <button class="trainers__button trainers__button--previous">
+            <svg width="16" height="32" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite_auto.svg#arrow-prev"></use>
+            </svg>
+            <span class="visually-hidden">Предыдущий</span>
+          </button>
+          <button class="trainers__button trainers__button--next">
+            <svg width="16" height="32" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite_auto.svg#arrow-next"></use>
+            </svg>
+            <span class="visually-hidden">Следующий</span>
+          </button>
         </div>
       </section>
       <section class="advantage">

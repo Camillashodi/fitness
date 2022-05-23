@@ -1,17 +1,69 @@
 .description {
   padding-top: 120px;
+  padding-bottom: 235px;
   color: $color-sapphire;
   font-family: $ff-default;
+
+  @include vp-1023 {
+    padding-top: 100px;
+    padding-bottom: 183px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 70px;
+  }
 }
 
 .description__container {
+  width: 100%;
+  max-width: 1266px;
+  margin: 0 auto;
+  padding: 0 53px;
   display: grid;
   grid-template-columns: 35.8% 7.3% 57%;
   position: relative;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .description__text {
   margin-left: 60px;
+
+  @include vp-1023 {
+    margin-left: 0;
+    
+    h2 {
+      font-size: 42px;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+      text-align: left;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
 
   h2 {
     margin: 0;
@@ -38,6 +90,16 @@
 
 .description__photo {
   grid-column-start: 3;
+
+  @include vp-1023 {
+    grid-column-start: 1;
+    padding-bottom: 40px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .description__video {
@@ -48,6 +110,29 @@
   max-height: 228px;
   left: 38%;
   top: 288px;
+
+  @include vp-1023 {
+    width: 266px;
+    height: 167px;
+    top: auto;
+    left: 33%;
+    bottom: -100px;
+  }
+
+  @include vp-767 {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    max-height: none;
+    height: auto;
+    bottom: auto;
+    left: auto;
+
+    video {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .description__video-button {
@@ -60,6 +145,16 @@
   background-color: $color-transparent;
   width: 100px;
   height: 100px;
+
+  @include vp-1023 {
+    width: 73px;
+    height: 73px;
+
+    svg {
+      width: 73px;
+      height: 73px;
+    }
+  }
 
   svg {
     position: absolute;

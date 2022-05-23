@@ -1,0 +1,30 @@
+.tabs-content__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    align-content: center;
+    justify-content: center;
+  }
+
+  &--second {
+    display: none;
+  }
+
+  &--third {
+    display: none;
+  }
+}
+
+.tabs-content__item {
+  @include vp-1023 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
