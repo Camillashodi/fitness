@@ -1,5 +1,6 @@
 .tabs-content__list {
-  display: grid;
+  //display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
@@ -11,6 +12,7 @@
     grid-template-columns: 1fr;
     align-content: center;
     justify-content: center;
+    row-gap: 35px;
   }
 
   &--second {
@@ -20,6 +22,14 @@
   &--third {
     display: none;
   }
+
+  &--second {
+    display: none;
+  }
+}
+
+.tabs-content__list.is-active {
+  display: grid;
 }
 
 .tabs-content__item {

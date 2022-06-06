@@ -9,19 +9,36 @@
   font-family: $ff-default;
   font-size: 16px;
   line-height: 24px;
+  flex-shrink: 0;
 
   @include vp-1023 {
     max-width: none;
     max-height: none;
     width: 35vw;
-    height: 40vw;
+    height: 38vw;
   }
 
   @include vp-767 {
     width: 70vw;
     height: 85vw;
   }
+/*
+  &:nth-child(n+5) {
+    display: none;
+  }
 
+  @include vp-1023 {
+    &:nth-child(n+3) {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    &:nth-child(n+2) {
+      display: none;
+    }
+  }
+*/
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
@@ -64,22 +81,31 @@
   background-color: rgba($color-sapphire, 0.89);
   width: 100%;
   height: 100%;
-  padding-top: 33px;
+  padding-top: 52px;
   box-sizing: border-box;
-  padding-right: 45px;
-  padding-left: 55px;
+  padding-right: 41px;
+  padding-left: 45px;
   overflow-y: auto;
+
+  @include vp-767 {
+    padding-top: 40px;
+
+    p {
+      margin-bottom: 18px;
+    }
+  }
 
   p {
     margin: 0;
     padding: 0;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 
   ul {
     padding: 0;
     margin: 0;
+    margin-left: 14px;
     list-style: none;
   }
 
@@ -88,7 +114,7 @@
     padding-left: 12px;
     font-size: 14px;
     line-height: 21px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
 
     &:last-child {
       margin-bottom: 5px;
@@ -103,11 +129,12 @@
       background-color: $color-default-white;
       border-radius: 50%;
       top: 7px;
-      left: 0;
+      left: -3px;
     }
   }
 }
 
+/*
 .trainer-card {
   &:nth-child(n+5) {
     display: none;
@@ -125,6 +152,7 @@
     }
   }
 }
+*/
 
 .trainer-card__avatar {
   position: absolute;
@@ -145,7 +173,7 @@
   figcaption {
     position: absolute;
     z-index: 2;
-    bottom: 30px;
+    bottom: 22px;
     width: 100%;
     text-align: center;
     font-size: 18px;

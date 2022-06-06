@@ -1,0 +1,72 @@
+.sign-up {
+  color: $color-default-white;
+
+  @include vp-1023 {
+    background-color: $color-sapphire;
+    position: relative;
+    display: grid;
+    justify-self: left;
+    align-items: center;
+
+    h2 {
+      font-size: 42px;
+      line-height: 42px;
+    }
+
+    &::before {
+      width: 100vw;
+      height: 100%;
+      left: -45px;
+    }
+  }
+
+  @include vp-767 {
+    justify-content: stretch;
+    justify-self: stretch;
+
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 28px;
+    }
+
+    &::before {
+      left: -15px;
+    }
+  }
+
+  h2 {
+    font-family: $ff-special;
+    font-size: 49px;
+    line-height: 64px;
+    letter-spacing: 0.03em;
+    margin: 0;
+    margin-bottom: 27px;
+    padding: 0;
+  }
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    background-color: $color-sapphire;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+.sign-up__container {
+  padding-top: 62px;
+  padding-bottom: 70px;
+
+  @include vp-1023 {
+    padding-top: 70px;
+    margin-left: 89px;
+  }
+
+  @include vp-767 {
+    margin-left: 0;
+  }
+}

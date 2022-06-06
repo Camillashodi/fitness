@@ -1,0 +1,159 @@
+.reviews {
+  font-family: $ff-default;
+  color: $color-default-white;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 120px;
+
+  @include vp-1023 {
+    margin-bottom: 101px;
+
+    h2 {
+      font-size: 42px;
+      line-height: 42px;
+      margin-bottom: 42px;
+    }
+  }
+
+  @include vp-767 {
+    margin-bottom: 70px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 32px;
+      margin-bottom: 42px;
+    }
+  }
+
+  h2 {
+    color: $color-sapphire;
+    font-size: 49px;
+    line-height: 49px;
+    font-family: $ff-special;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 52px;
+    padding: 0;
+    letter-spacing: 0.03em;
+  }
+}
+
+.reviews__container {
+  position: relative;
+}
+
+.reviews__list {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews__body {
+  position: relative;
+  background-color: $resolution-blue;
+  width: 560px;
+  margin: 0;
+  padding: 62px;
+  padding-top: 55px;
+  padding-bottom: 56px;
+  padding-left: 170px;
+  box-sizing: border-box;
+
+  @include vp-1023 {
+    width: 566px;
+    padding-left: 174px;
+  }
+
+  @include vp-767 {
+    width: calc(100vw - 94px);
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 41px;
+    text-align: center;
+    padding-bottom: 36px;
+  }
+
+  cite {
+    font-family: $ff-default;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    font-style: normal;
+
+    @include vp-767 {
+      display: flex;
+      column-gap: 0;
+      margin-left: 17px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  }
+
+  img {
+    position: absolute;
+    left: 62px;
+    top: 26%;
+
+    @include vp-767 {
+      position: static;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    margin-top: 12px;
+    line-height: 22px;
+    font-size: 16px;
+  }
+}
+/*
+.slider__button {
+  outline: none;
+  border: none;
+  background: none;
+  position: absolute;
+  top: calc(50% + 35px);
+
+  @include vp-1023 {
+    top: calc(50% + 28px);
+
+    &--next {
+      right: calc(50% - 346px);
+    }
+
+    &--previous {
+      left: calc(50% - 346px);
+    }
+  }
+
+  @include vp-767 {
+    svg {
+      width: 10px;
+      height: 19px;
+    }
+
+    &--next {
+      right: 10px;
+    }
+
+    &--previous {
+      left: 10px;
+    }
+  }
+
+  &--next {
+    right: calc(50% - 342px);
+  }
+
+  &--previous {
+    left: calc(50% - 342px);
+  }
+
+  svg {
+    fill: none;
+  }
+}
+*/

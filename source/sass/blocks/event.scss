@@ -1,6 +1,16 @@
 .event {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 117px;
+
+  @include vp-1023 {
+    padding-top: 100px;
+    padding-bottom: 98px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
 }
 
 .event__container {
@@ -14,9 +24,6 @@
 
 .event__content {
   background-color: $tints-torch-red;
-}
-
-.event__content {
   color: $color-default-white;
   font-family: $ff-default;
   font-size: 18px;
@@ -36,10 +43,11 @@
   @include vp-1023 {
     font-size: 12px;
     line-height: 18px;
+    height: 38vw;
   }
 
   @include vp-767 {
-    height: 90vw;
+    height: 90.4vw;
     max-height: none;
   }
 }
@@ -47,16 +55,18 @@
 .event__wrapper {
   display: grid;
   width: 27vw;
-  max-width: 345px;
+  max-width: 343px;
   grid-template-columns: 59% 1fr;
   grid-template-rows: min-content;
-  column-gap: 50px;
+  column-gap: 45px;
   align-items: center;
   align-self: center;
   justify-self: center;
+  //padding-bottom: 27px;
 
   @include vp-1023 {
-    column-gap: 29px;
+    column-gap: 25px;
+    margin-bottom: 10px;
   }
 
   @include vp-767 {
@@ -73,12 +83,12 @@
   }
 
   h2 {
-  font-family: $ff-special;
-  font-size: 90px;
-  line-height: 90px;
-  letter-spacing: 0.03em;
-  padding: 0;
-  margin: 0;
+    font-family: $ff-special;
+    font-size: 90px;
+    line-height: 90px;
+    letter-spacing: 0.03em;
+    padding: 0;
+    margin: 0;
   }
 }
 
@@ -86,6 +96,11 @@
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 2;
+  margin-bottom: 33px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
 
   p {
     margin: 0;
@@ -101,6 +116,11 @@
     }
 
     td {
+      font-size: 10px;
+      line-height: 15px;
+    }
+
+    th {
       font-size: 12px;
       line-height: 18px;
     }
@@ -115,6 +135,7 @@
   tr {
     display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: min-content;
     text-align: left;
     justify-items: left;
   }
@@ -135,24 +156,35 @@
   grid-column-end: 3;
   border: 4px solid $color-default-white;
   background-color: $color-transparent;
-  padding-top: 28px;
-  padding-bottom: 28px;
+  padding-top: 25px;
+  padding-bottom: 25px;
   justify-content: center;
   font-weight: 700;
+  letter-spacing: 0.05em;
 
   @include vp-1023 {
     font-size: 10px;
     line-height: 12px;
     padding-left: 52px;
     padding-right: 53px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    border: 2px solid $color-default-white;
+    margin-bottom: 0;
   }
 }
 
 .event__img {
   height: 100%;
   max-height: 500px;
+
+  @include vp-1023 {
+    height: 38vw;
+  }
+
+  @include vp-767 {
+    height: 91.3vw;
+  }
 
   img {
     display: block;

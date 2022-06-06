@@ -1,11 +1,16 @@
 .advantage {
   background-color: $ghost-white;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 118px;
+  padding-bottom: 114px;
 
   @include vp-1023 {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 85px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 60px;
   }
 
   h2 {
@@ -15,10 +20,14 @@
     color: $color-sapphire;
     letter-spacing: 0.03em;
     text-align: center;
+    margin: 0;
+    margin-bottom: 64px;
+    padding: 0;
 
     @include vp-1023 {
       font-size: 42px;
       line-height: 42px;
+      margin-bottom: 43px;
     }
 
     @include vp-767 {
@@ -34,7 +43,7 @@
   max-width: 1266px;
   margin: 0 auto;
   padding: 0 53px;
-  
+
   @include vp-1023 {
     padding: 0 45px;
   }
@@ -48,30 +57,31 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  padding-left: 61px;
-  padding-right: 61px;
+  padding-left: 60px;
+  padding-right: 60px;
   display: grid;
   grid-template-areas: "a1 special a2"
     "a3 special a4";
-  column-gap: 40px;
+  column-gap: 60px;
   grid-template-columns: 33% 23% 33%;
 
   @include vp-1023 {
     grid-template-areas: "a1 a2"
-    "special special"
-    "a3 a4";
+      "special special"
+      "a3 a4";
     grid-template-columns: 1fr 1fr;
-    row-gap: 50px;
+    row-gap: 30px;
     padding-left: 0;
     padding-right: 0;
+    column-gap: 33px;
   }
 
   @include vp-767 {
     grid-template-areas: "a1"
-    "a2"
-    "special"
-    "a3"
-    "a4";
+      "a2"
+      "special"
+      "a3"
+      "a4";
     grid-template-columns: 1fr;
   }
 }
