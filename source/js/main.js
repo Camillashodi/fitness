@@ -65,7 +65,22 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---------------carousel---------------
+  const carousel = document.querySelector('.trainers__list');
+  const carouselElement = document.querySelectorAll('.trainers__item');
 
+  let indx = 0;
+  const nextItem = document.querySelector('.trainers__button--next');
+
+  nextItem.addEventListener('click', function () {
+    ++indx;
+    if (indx > carouselElement.length - 1) {
+      indx = 0;
+      carousel.scrollTo(0, 0);
+    }
+    let item = carouselElement[indx];
+    let count = item.offsetLeft / indx;
+    carousel.scrollBy({top: 0, left: `${count}`, behavior: 'smooth'});
+  });
 
 
   iosVhFix();

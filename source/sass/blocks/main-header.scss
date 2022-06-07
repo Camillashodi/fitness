@@ -236,4 +236,16 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      //outline: 1px solid $black-russian;
+      opacity: 0.7;
+    }
+  }
+
+  &:focus {
+    opacity: 0.7;
+  }
 }

@@ -27,6 +27,11 @@
     width: 190px;
     font-size: 14px;
     line-height: 16px;
+    color: $color-default-white;
+
+    &:focus {
+      outline: none;
+    }
 
     @include vp-1023 {
       width: 206px;

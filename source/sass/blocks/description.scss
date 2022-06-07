@@ -200,6 +200,18 @@
   width: 100px;
   height: 100px;
 
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      //outline: 1px solid $black-russian;
+      transform: scale(1.03);
+    }
+  }
+
+  &:focus {
+    transform: scale(1.03);
+  }
+
   @include vp-1023 {
     width: 73px;
     height: 73px;

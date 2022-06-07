@@ -664,14 +664,14 @@
             <div class="sign-up__container">
               <h2>БЕСПЛАТНОЕ занятие</h2>
               <div class="sign-up__form form">
-                <form action="#" method="POST">
+                <form action="https://echo.htmlacademy.ru/" method="POST">
                   <div class="form__input">
                     <label for="name" class="visually-hidden">Имя</label>
-                    <input type="text" placeholder="Имя" name="name" id="name">
+                    <input type="text" placeholder="Имя" name="name" id="name" required>
                   </div>
                   <div class="form__input">
                     <label for="phone" class="visually-hidden">Телефон</label>
-                    <input type="tel" placeholder="Телефон" name="phone" id="phone">
+                    <input type="tel" placeholder="Телефон" name="phone" id="phone" minlength="10" required>
                   </div>
                   <button type="submit" class="btn form__button">отправить</button>
                 </form>
@@ -709,7 +709,7 @@
         <nav class="footer__nav navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__logo">
+              <a class="navigation__logo">
                 <img src="./img/supergym.svg" alt="Логотип фитнес-центра Supergym" width="89" height="20">
               </a>
             </li>

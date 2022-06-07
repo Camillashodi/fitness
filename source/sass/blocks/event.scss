@@ -16,6 +16,8 @@
 .event__container {
   display: grid;
   grid-template-columns: 43% 57%;
+  position: relative;
+  z-index: 1;
 
   @include vp-767 {
     grid-template-columns: 1fr;

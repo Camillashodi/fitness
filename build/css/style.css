@@ -814,6 +814,10 @@ button,
   font-family: "Bebas Neue", "Arial", sans-serif;
 }
 
+.header__tel:focus {
+  opacity: 0.7;
+}
+
 .main-header {
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   padding-top: 51px;
@@ -961,6 +965,10 @@ button,
   line-height: 14px;
 }
 
+.main-header__social-link:focus {
+  opacity: 0.7;
+}
+
 .wrapper {
   position: relative;
 }
@@ -1048,6 +1056,12 @@ button,
   height: 100px;
 }
 
+.description__video-button:focus {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
 .description__video-button svg {
   position: absolute;
   top: -15px;
@@ -1058,6 +1072,19 @@ button,
   padding-top: 119px;
   padding-bottom: 120px;
   background-color: #f8f9fc;
+  position: relative;
+}
+
+.subscription::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 287px;
+  height: 424px;
+  background-image: url(../img/inventory.png);
+  right: 0;
+  bottom: -150px;
+  z-index: 0;
 }
 
 .subscription h2 {
@@ -1078,6 +1105,8 @@ button,
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
+  z-index: 1;
+  position: relative;
 }
 
 .subscription .subscription__tabs {
@@ -1301,6 +1330,8 @@ button,
   display: grid;
   -ms-grid-columns: 43% 57%;
   grid-template-columns: 43% 57%;
+  position: relative;
+  z-index: 1;
 }
 
 .event__content {
@@ -1455,10 +1486,10 @@ button,
 */
 
 .trainers__wrapper {
-  overflow-x: hidden;
   width: 92vw;
   background-color: #ffffff;
   max-width: 1160px;
+  overflow-x: hidden;
 }
 
 .trainers__container {
@@ -1469,9 +1500,12 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  position: relative;
+  margin-right: 40px;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  overflow-x: hidden;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   list-style: none;
@@ -1480,9 +1514,6 @@ button,
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
   column-gap: 40px;
-  -webkit-column-gap: 4%;
-  -moz-column-gap: 4%;
-  column-gap: 4%;
 }
 
 .trainers__button {
@@ -1494,8 +1525,8 @@ button,
   top: calc(50% + 33px);
 }
 
-.trainers__button:focus {
-  outline: 1px solid #030a1a;
+.trainers__button:focus svg {
+  opacity: 0.2;
 }
 
 .trainers__button svg {
@@ -2132,8 +2163,8 @@ button,
   top: calc(50% + 35px);
 }
 
-.slider__button:focus {
-  outline: 1px solid #030a1a;
+.slider__button:focus svg {
+  opacity: 0.2;
 }
 
 .slider__button--next {
@@ -2223,6 +2254,13 @@ button,
   width: 190px;
   font-size: 14px;
   line-height: 16px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form__input input:focus {
+  outline: none;
 }
 
 .form__input input::-webkit-input-placeholder {
@@ -2285,7 +2323,7 @@ button,
   padding-top: 70px;
   padding-bottom: 60px;
   color: #102654;
-  margin-right: 53px;
+  margin-right: 9%;
 }
 
 .contact::before {
@@ -2307,6 +2345,21 @@ button,
   margin: 0;
   margin-bottom: 37px;
   padding: 0;
+}
+
+.contact table {
+  position: relative;
+}
+
+.contact table::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 84%;
+  background-color: #74819c;
+  top: 7.5%;
+  left: 57.5%;
 }
 
 .contact tbody {
@@ -2400,7 +2453,6 @@ button,
   flex-wrap: wrap;
   -ms-flex-item-align: center;
   align-self: center;
-  margin-right: 30px;
 }
 
 .navigation__item {
@@ -2415,6 +2467,10 @@ button,
 
 .navigation__item:last-child {
   margin-right: 0;
+}
+
+.navigation__link:focus {
+  opacity: 0.7;
 }
 
 .socials {
@@ -2444,6 +2500,10 @@ button,
   display: block;
 }
 
+.socials__link:focus {
+  opacity: 0.7;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -2455,6 +2515,23 @@ button,
   .btn:hover,
   .btn:focus {
     opacity: 0.8;
+  }
+
+  .header__tel:hover,
+  .header__tel:focus {
+    opacity: 0.7;
+  }
+
+  .main-header__social-link:hover,
+  .main-header__social-link:focus {
+    opacity: 0.7;
+  }
+
+  .description__video-button:hover,
+  .description__video-button:focus {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
   }
 
   .tabs__link:hover,
@@ -2481,9 +2558,9 @@ button,
     padding-bottom: 27px;
   }
 
-  .trainers__button:hover,
-  .trainers__button:focus {
-    outline: 1px solid #030a1a;
+  .trainers__button:hover svg,
+  .trainers__button:focus svg {
+    opacity: 0.2;
   }
 
   .trainer-card:hover .trainer-card__content,
@@ -2496,9 +2573,24 @@ button,
     display: none;
   }
 
-  .slider__button:hover,
-  .slider__button:focus {
-    outline: 1px solid #030a1a;
+  .promotion__item a:hover,
+  .promotion__item a:focus {
+    opacity: 0.7;
+  }
+
+  .slider__button:hover svg,
+  .slider__button:focus svg {
+    opacity: 0.2;
+  }
+
+  .navigation__link:hover,
+  .navigation__link:focus {
+    opacity: 0.7;
+  }
+
+  .socials__link:hover,
+  .socials__link:focus {
+    opacity: 0.7;
   }
 }
 
@@ -3254,6 +3346,10 @@ button,
     left: 42.5%;
   }
 
+  .subscription::after {
+    display: none;
+  }
+
   .subscription {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -3353,12 +3449,13 @@ button,
 
   .trainers__wrapper {
     padding: 0;
+    margin-left: 1vw;
   }
 
   .trainers__list {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    margin: auto;
+    position: relative;
+    width: 70vw;
   }
 
   .trainers__button svg {
@@ -3561,6 +3658,15 @@ button,
     margin-left: 17px;
     margin-bottom: 15px;
     text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-column-gap: 5px;
+    -moz-column-gap: 5px;
+    column-gap: 5px;
   }
 
   .reviews__body img {
@@ -3637,6 +3743,10 @@ button,
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 31px;
+  }
+
+  .contact table::after {
+    display: none;
   }
 
   .contact tbody {

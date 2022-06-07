@@ -2,6 +2,23 @@
   padding-top: 119px;
   padding-bottom: 120px;
   background-color: $ghost-white;
+  position: relative;
+
+  &::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 287px;
+    height: 424px;
+    background-image: url("../img/inventory.png");
+    right: 0;
+    bottom: -150px;
+    z-index: 0;
+
+    @include vp-767 {
+      display: none;
+    }
+  }
 
   @include vp-1023 {
     padding-top: 97px;
@@ -42,6 +59,8 @@
 .subscription__container {
   display: grid;
   grid-template-columns: 1fr;
+  z-index: 1;
+  position: relative;
 }
 
 .subscription .subscription__tabs {

@@ -45,6 +45,18 @@
   justify-self: right;
   font-family: $ff-special;
 
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      //outline: 1px solid $black-russian;
+      opacity: 0.7;
+    }
+  }
+
+  &:focus {
+    opacity: 0.7;
+  }
+
   @include vp-1023 {
     font-size: 24px;
     line-height: 24px;

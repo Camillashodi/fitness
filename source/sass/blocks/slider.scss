@@ -9,12 +9,16 @@
   @media (hover: hover), screen and (min-width: 0\0) {
     &:hover,
     &:focus {
-      outline: 1px solid $black-russian;
+      svg {
+        opacity: 0.2;
+      }
     }
   }
 
   &:focus {
-    outline: 1px solid $black-russian;
+    svg {
+      opacity: 0.2;
+    }
   }
 
   @include vp-1023 {
