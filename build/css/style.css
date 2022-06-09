@@ -787,6 +787,10 @@ button,
   pointer-events: auto;
 }
 
+.page {
+  scroll-behavior: smooth;
+}
+
 .header {
   font-family: "Bebas Neue", "Arial", sans-serif;
   padding-top: 30px;
@@ -1079,12 +1083,14 @@ button,
   display: block;
   position: absolute;
   content: "";
-  width: 287px;
-  height: 424px;
-  background-image: url(../img/inventory.png);
+  width: 347px;
+  height: 444px;
+  background-image: url("../img/inventory.png");
   right: 0;
-  bottom: -150px;
+  bottom: -120px;
   z-index: 0;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
 .subscription h2 {
@@ -1196,10 +1202,6 @@ button,
 }
 
 .tabs-content__list--third {
-  display: none;
-}
-
-.tabs-content__list--second {
   display: none;
 }
 
@@ -1501,7 +1503,6 @@ button,
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin-right: 40px;
   min-height: -webkit-min-content;
   min-height: -moz-min-content;
   min-height: min-content;
@@ -1570,7 +1571,7 @@ button,
       display: none;
     }
   }
-*/
+  */
 }
 
 .trainer-card:focus .trainer-card__content {
@@ -2255,8 +2256,6 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
-  font-size: 14px;
-  line-height: 16px;
 }
 
 .form__input input:focus {
@@ -2782,6 +2781,15 @@ button,
   .description__video-button svg {
     width: 73px;
     height: 73px;
+  }
+
+  .subscription::after {
+    bottom: -120px;
+    width: 347px;
+    height: 444px;
+    background-image: url("../img/eqv.png");
+    background-position: 100% 50%;
+    bottom: -125px;
   }
 
   .subscription {
@@ -3652,9 +3660,6 @@ button,
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-column-gap: 0;
-    -moz-column-gap: 0;
-    column-gap: 0;
     margin-left: 17px;
     margin-bottom: 15px;
     text-align: center;

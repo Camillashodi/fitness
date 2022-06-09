@@ -70,6 +70,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let indx = 0;
   const nextItem = document.querySelector('.trainers__button--next');
+  const prvItem = document.querySelector('.trainers__button--previous');
 
   nextItem.addEventListener('click', function () {
     ++indx;
@@ -80,6 +81,18 @@ window.addEventListener('DOMContentLoaded', () => {
     let item = carouselElement[indx];
     let count = item.offsetLeft / indx;
     carousel.scrollBy({top: 0, left: `${count}`, behavior: 'smooth'});
+  });
+
+  prvItem.addEventListener('click', function () {
+    if (indx <= 0) {
+      indx = 0;
+      carousel.scrollBy({top: 0, left: 0, behavior: 'smooth'});
+    } else {
+      let item = carouselElement[indx];
+      let count = item.offsetLeft / indx;
+      carousel.scrollBy({top: 0, left: -`${count}`, behavior: 'smooth'});
+      --indx;
+    }
   });
 
 
