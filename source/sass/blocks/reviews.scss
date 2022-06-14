@@ -5,7 +5,7 @@
   line-height: 22px;
   margin-bottom: 120px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-bottom: 101px;
 
     h2 {
@@ -59,7 +59,7 @@
   padding-left: 170px;
   box-sizing: border-box;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 566px;
     padding-left: 174px;
   }
@@ -119,7 +119,7 @@
   position: absolute;
   top: calc(50% + 35px);
 
-  @include vp-1023 {
+  @include vp-1199 {
     top: calc(50% + 28px);
 
     &--next {

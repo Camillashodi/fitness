@@ -8,7 +8,7 @@
     padding-top: 82px;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-bottom: 82px;
   }
 
@@ -26,7 +26,7 @@
     grid-template-columns: minmax(760px, 960px) minmax(40px, 1fr);
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-template-columns: 1fr;
   }
 }
@@ -35,7 +35,7 @@
   display: grid;
   grid-template-columns: 396px minmax(34px, 64px) 1fr;
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-template-columns: 1fr 30px 1fr;
   }
 
@@ -51,7 +51,7 @@
   grid-auto-rows: min-content;
   align-self: end;
 
-  @include vp-1023 {
+  @include vp-1199 {
     p {
       font-size: 34px;
       line-height: 41px;
@@ -88,7 +88,7 @@
   grid-template-columns: 1fr 1fr;
   align-self: start;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 324px;
     justify-self: right;
 
@@ -136,9 +136,10 @@
 
   ul {
     margin: 0;
-    margin-left: 19px;
+    margin-left: 20px;
     margin-bottom: 27px;
     padding: 0;
+    font-family: $ff-default;
     list-style: none;
     text-align: right;
     font-size: 14px;
@@ -150,7 +151,7 @@
     align-self: end;
     justify-self: left;
     min-width: 0;
-    letter-spacing: -0.05em;
+    //letter-spacing: -0.05em;
   }
 }
 
@@ -162,7 +163,7 @@
     justify-self: left;
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     min-height: 390px;
 
     img {
@@ -192,7 +193,7 @@
   justify-self: right;
   //align-self: end;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-bottom: 22px;
     margin-top: 40px;
     padding: 20px 30px;
@@ -215,7 +216,7 @@
   justify-self: right;
   align-self: end;
 
-  @include vp-1023 {
+  @include vp-1199 {
     display: none;
   }
 }

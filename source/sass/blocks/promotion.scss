@@ -6,7 +6,7 @@
   line-height: 22px;
   font-family: $ff-default;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-top: 98px;
     padding-bottom: 98px;
 
@@ -50,7 +50,7 @@
   margin: 0;
   padding: 0;
 
-  @include vp-1023 {
+  @include vp-1199 {
     column-gap: 30px;
     row-gap: 30px;
   }
@@ -66,7 +66,7 @@
   border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
   border-image-slice: 30%;
 
-  @include vp-1023 {
+  @include vp-1199 {
     min-height: 211px;
   }
 
@@ -116,10 +116,8 @@
     grid-row-start: 1;
     grid-row-end: 3;
     border: none;
-    height: 40vw;
-    max-height: 462px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       grid-template-columns: 41% 59%;
       grid-column-start: 1;
       grid-column-end: 3;
@@ -172,7 +170,7 @@
     .promotion__content {
       padding: 45px;
 
-      @include vp-1023 {
+      @include vp-1199 {
         padding-right: 20px;
       }
 
@@ -200,23 +198,49 @@
 }
 
 .promotion__img {
+  min-height: 462px;
   height: 100%;
+  position: relative;
+  //max-height: 500px;
+  //max-height: 462px;
+  overflow-y: hidden;
+  overflow-x: hidden;
 
-  @include vp-1023 {
+  @media (max-width: 1366px) {
+    min-height: 34vw;
+  }
+
+  @include vp-1199 {
     height: 100%;
     max-height: 100%;
     overflow-y: hidden;
+    overflow-x: hidden;
+
+    img {
+      height: 100%;
+      width: 120%;
+      max-width: 120%;
+      transform: translateX(-1.5%);
+      object-position: 0 79%;
+    }
   }
 
   @include vp-767 {
     height: 94vw;
+
+    img {
+      object-position: 0 70%;
+    }
   }
 
   img {
     display: block;
     height: 100%;
-    width: 100%;
+    width: 152%;
+    max-width: 152%;
     object-fit: cover;
-    object-position: 50% 0;
+    object-position: 0 100%;
+    position: absolute;
+    transform: translateX(-7%);
   }
 }

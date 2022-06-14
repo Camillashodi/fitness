@@ -7,7 +7,7 @@
   flex-wrap: wrap;
   margin-top: 5px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-top: 10px;
   }
 }
@@ -15,7 +15,7 @@
 .socials__item {
   margin-right: 25px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-right: 20px;
   }
 

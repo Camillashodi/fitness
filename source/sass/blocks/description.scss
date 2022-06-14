@@ -1,12 +1,12 @@
 .description {
   padding-top: 120px;
-  padding-bottom: 235px;
+  padding-bottom: 195px;
   color: $color-sapphire;
   font-family: $ff-default;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-top: 100px;
-    padding-bottom: 145px;
+    padding-bottom: 185px;
   }
 
   @include vp-767 {
@@ -24,7 +24,7 @@
   grid-template-columns: 35.8% 7.3% 57%;
   position: relative;
 
-  @include vp-1023 {
+  @include vp-1199 {
     grid-template-columns: 1fr;
     padding: 0 45px;
   }
@@ -39,7 +39,7 @@
   margin-left: 60px;
   margin-top: 47px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-left: 0;
     margin-top: 0;
 
@@ -53,7 +53,7 @@
       text-align: center;
       padding-left: 75px;
       padding-right: 75px;
-      margin-bottom: 38px;
+      margin-bottom: 41px;
     }
   }
 
@@ -107,7 +107,7 @@
     }
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-bottom: 35px;
 
     p {
@@ -125,32 +125,59 @@
 }
 
 .description__text-desk {
-  @include vp-1023 {
+  @include vp-1199 {
     display: none;
   }
 }
 
 .description__photo {
   grid-column-start: 3;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
-  @include vp-1023 {
+  img {
+    object-fit: cover;
+    object-position: 0 0;
+    height: 440px;
+    width: 660px;
+    transform: translateY(-39px);
+  }
+
+  @include vp-1199 {
     grid-column-start: 1;
     padding-bottom: 40px;
-    height: 50.5vw;
+    height: 45vw;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
 
     img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      position: absolute;
+      //max-width: 780px;
+      max-width: 115%;
+      width: 225%;
+      //height: 407px;
+      height: 113%;
+      object-fit: fill;
+      object-position: 0 0;
+      display: block;
+      white-space: nowrap;
+      top: 50%;
+      left: 50%;
+      transform: translate(-56%, -47%);
     }
   }
 
   @include vp-767 {
-    height: 110vw;
+    height: 98vw;
+    margin-bottom: 38px;
 
     img {
       object-position: right;
+      max-width: 150%;
+      height: 100%;
+      transform: translate(-63%, -50%);
     }
   }
 }
@@ -164,12 +191,13 @@
   left: 38.8%;
   top: 288px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 266px;
     height: 167px;
     top: auto;
-    left: 33%;
-    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -85px;
   }
 
   @include vp-767 {
@@ -180,13 +208,23 @@
     bottom: auto;
     left: auto;
     height: 52vw;
+    transform: translateX(0);
 
-    video {
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
+}
+
+.description__youtube-frame {
+  height: 100%;
 }
 
 .description__video-button {
@@ -212,7 +250,7 @@
     transform: scale(1.03);
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     width: 73px;
     height: 73px;
 

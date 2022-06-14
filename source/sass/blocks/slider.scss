@@ -10,18 +10,24 @@
     &:hover,
     &:focus {
       svg {
-        opacity: 0.2;
+        opacity: 0.6;
       }
     }
   }
 
   &:focus {
     svg {
-      opacity: 0.2;
+      opacity: 0.6;
     }
   }
 
-  @include vp-1023 {
+  &:disabled {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  @include vp-1199 {
     top: calc(50% + 28px);
 
     &--next {

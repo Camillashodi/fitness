@@ -2,7 +2,7 @@
   position: relative;
   padding-bottom: 120px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding-bottom: 100px;
   }
 
@@ -20,7 +20,7 @@
     padding: 0;
     margin-bottom: 52px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       text-align: center;
       font-size: 42px;
       line-height: 42px;
@@ -42,17 +42,17 @@
   width: 92vw;
   background-color: $color-default-white;
   max-width: 1160px;
-  overflow-x: hidden;
   //overflow-x: auto;
 
-  @include vp-1023 {
+  @include vp-1199 {
     padding: 0 56px;
   }
 
   @include vp-767 {
     padding: 0;
-    //margin-right: 47px;
-    margin-left: 1vw;
+    display: grid;
+    justify-content: center;
+    width: 100%;
   }
 }
 
@@ -65,15 +65,15 @@
   position: relative;
   min-height: min-content;
   //overflow-x: hidden;
-  overflow-x: hidden;
-  //justify-content: space-between;
+  //overflow-x: hidden;
+  justify-content: left;
   flex-wrap: nowrap;
   list-style: none;
   margin: 0;
   padding: 0;
   column-gap: 40px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     column-gap: 30px;
   }
 
@@ -142,7 +142,7 @@
     }
   }
 
-  @include vp-1023 {
+  @include vp-1199 {
     &--previous {
       left: 38px;
       top: calc(50% + 25px);

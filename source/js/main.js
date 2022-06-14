@@ -36,65 +36,108 @@ window.addEventListener('DOMContentLoaded', () => {
 
   let btnRight = document.querySelector('.slider__button--next');
   let btnLeft = document.querySelector('.slider__button--previous');
+  btnLeft.disabled = true;
   let slides = document.querySelectorAll('.slider__item');
-  let index = 0;
 
   btnRight.addEventListener('click', function () {
-    ++index;
-    if (index >= slides.length) {
-      slides[index - 1].classList.remove('is-active');
-      index = 0;
-      slides[index].classList.add('is-active');
-    } else {
-      slides[index - 1].classList.remove('is-active');
-      slides[index].classList.add('is-active');
+    let index = Array.from(slides).findIndex((slide) => {
+      return slide.classList.contains('is-active');
+    });
+    if (index === slides.length - 2) {
+      btnRight.disabled = true;
     }
+    slides[index].classList.remove('is-active');
+    slides[index + 1].classList.add('is-active');
+    btnLeft.disabled = false;
   });
 
   btnLeft.addEventListener('click', function () {
-    --index;
-    if (index < 0) {
-      index = 0;
-      slides[index].classList.remove('is-active');
-      index = slides.length - 1;
-      slides[index].classList.add('is-active');
-    } else {
-      slides[index + 1].classList.remove('is-active');
-      slides[index].classList.add('is-active');
+    let index = Array.from(slides).findIndex((slide) => {
+      return slide.classList.contains('is-active');
+    });
+    if (index === 1) {
+      btnLeft.disabled = true;
     }
+    slides[index].classList.remove('is-active');
+    slides[index - 1].classList.add('is-active');
+    btnRight.disabled = false;
   });
 
   // ---------------carousel---------------
   const carousel = document.querySelector('.trainers__list');
-  const carouselElement = document.querySelectorAll('.trainers__item');
+  const carouselElement = document.getElementsByClassName('trainers__item');
 
-  let indx = 0;
   const nextItem = document.querySelector('.trainers__button--next');
   const prvItem = document.querySelector('.trainers__button--previous');
 
   nextItem.addEventListener('click', function () {
-    ++indx;
-    if (indx > carouselElement.length - 1) {
-      indx = 0;
-      carousel.scrollTo(0, 0);
+    if (innerWidth > 1999 && carouselElement.length > 4) {
+      let elment = carouselElement[0];
+      elment.remove();
+      carousel.appendChild(elment);
     }
-    let item = carouselElement[indx];
-    let count = item.offsetLeft / indx;
-    carousel.scrollBy({top: 0, left: `${count}`, behavior: 'smooth'});
+    if (innerWidth > 767 && innerWidth <= 1999 && carouselElement.length > 2) {
+      let elment = carouselElement[0];
+      elment.remove();
+      carousel.appendChild(elment);
+    }
+    if (innerWidth <= 767 && carouselElement.length > 1) {
+      let elment = carouselElement[0];
+      elment.remove();
+      carousel.appendChild(elment);
+    }
   });
 
   prvItem.addEventListener('click', function () {
-    if (indx <= 0) {
-      indx = 0;
-      carousel.scrollBy({top: 0, left: 0, behavior: 'smooth'});
-    } else {
-      let item = carouselElement[indx];
-      let count = item.offsetLeft / indx;
-      carousel.scrollBy({top: 0, left: -`${count}`, behavior: 'smooth'});
-      --indx;
+    if (innerWidth > 1999 && carouselElement.length > 4) {
+      let elment = carouselElement[carouselElement.length - 1];
+      elment.remove();
+      carousel.insertAdjacentElement('afterbegin', elment);
+    }
+    if (innerWidth > 767 && innerWidth <= 1999 && carouselElement.length > 2) {
+      let elment = carouselElement[carouselElement.length - 1];
+      elment.remove();
+      carousel.insertAdjacentElement('afterbegin', elment);
+    }
+    if (innerWidth <= 767 && carouselElement.length > 1) {
+      let elment = carouselElement[carouselElement.length - 1];
+      elment.remove();
+      carousel.insertAdjacentElement('afterbegin', elment);
     }
   });
 
+  // --------- form check -----------
+  const form = document.querySelector('form');
+  const phoneInput = document.getElementById('phone');
+
+  phoneInput.addEventListener('input', function () {
+    if (phoneInput.validity.patternMismatch) {
+      phoneInput.setCustomValidity('Пожалуйста, введитие цифры номера');
+    } else {
+      phoneInput.setCustomValidity('');
+    }
+    phoneInput.reportValidity();
+  });
+
+  form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    if (phoneInput.value.length < 10) {
+      phoneInput.setCustomValidity('Пожалуйста, введитие от 10 цифр');
+      phoneInput.reportValidity();
+    } else {
+      phoneInput.setCustomValidity('');
+      form.submit();
+    }
+  });
+
+  // ---------------video--------------
+  const videoContainer = document.querySelector('.description__youtube-frame');
+  const videoButton = document.querySelector('.description__video-button');
+
+  videoButton.addEventListener('click', function () {
+    videoContainer.innerHTML = '<iframe width="364" height="228" src="https://www.youtube.com/embed/9TZXsZItgdw?autoplay=1" frameborder="0" allow="autoplay" allowfullscreen></iframe>';
+    videoButton.style.display = 'none';
+  });
 
   iosVhFix();
 

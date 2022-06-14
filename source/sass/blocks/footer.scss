@@ -20,7 +20,7 @@
   column-gap: 50px;
   position: relative;
 
-  @include vp-1023 {
+  @include vp-1199 {
     column-gap: 20px;
     grid-template-columns: 82px 1fr max-content;
   }

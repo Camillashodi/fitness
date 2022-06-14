@@ -2,7 +2,7 @@
   position: absolute;
   left: 53px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     left: 43px;
 
     img {
@@ -32,7 +32,7 @@
   //margin-right: 30px;
   //margin-top: 6px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-right: 0;
   }
 
@@ -54,7 +54,7 @@
   font-size: 14px;
   line-height: 16px;
 
-  @include vp-1023 {
+  @include vp-1199 {
     margin-right: 30px;
   }
 

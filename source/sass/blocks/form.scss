@@ -5,7 +5,7 @@
     column-gap: 30px;
     row-gap: 30px;
 
-    @include vp-1023 {
+    @include vp-1199 {
       column-gap: 60px;
       row-gap: 30px;
     }
@@ -33,7 +33,7 @@
       outline: none;
     }
 
-    @include vp-1023 {
+    @include vp-1199 {
       width: 206px;
     }
 
